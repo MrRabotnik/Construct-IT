@@ -1,0 +1,13 @@
+@import "../../utils/constants.scss";
+
+.main-block-section {
+    height: 100%;
+    flex-grow: 1;
+    overflow: auto;
+    border-right: 1px solid $border-color;
+    border-left: 1px solid $border-color;
+
+    & > div {
+        height: 100%;
+    }
+}

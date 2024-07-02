@@ -1,0 +1,92 @@
+@import "../../utils/constants.scss";
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Ga+Maamli&family=Playwrite+ES+Deco:wght@100..400&display=swap");
+
+.category-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+    cursor: pointer;
+}
+
+.drop-down {
+    padding: 10px 0;
+    .element-container {
+        padding: 5px 20px;
+        user-select: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .element {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            background-color: white;
+
+            .opening-tag {
+                padding: 5px;
+                border: 1px solid$border-color-darker;
+                border-right: 1px solid $border-color;
+
+                &.border-normal {
+                    border-right: 1px solid $border-color-darker;
+                }
+            }
+
+            .vertical-line {
+                width: 1px;
+                padding: 10px 0;
+                background-color: $border-color-darker;
+            }
+
+            .closing-tag {
+                padding: 5px;
+                border: 1px solid$border-color-darker;
+                border-left: 1px solid $border-color;
+            }
+        }
+
+        .img-container {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            position: relative;
+            visibility: hidden;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+
+            .description-container {
+                position: absolute;
+                width: 200px;
+                background-color: white;
+                top: 0;
+                left: 150%;
+                padding: 10px;
+                border-radius: 10px;
+                border: 1px solid $border-color-darker;
+                display: none;
+            }
+
+            &:hover .description-container {
+                display: block;
+            }
+        }
+
+        &:hover .img-container {
+            visibility: visible;
+        }
+    }
+}
+
+.bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 1px;
+}
